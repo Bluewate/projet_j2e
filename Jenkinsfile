@@ -6,22 +6,22 @@ pipeline {
         jdk "JDK"
     }
 
-    stages {
+   
         stage('Initialize'){
-            steps{
+           
                 echo "PATH = ${M2_HOME}/bin:${PATH}"
                 echo "M2_HOME = /opt/maven"
-            }
+            
         }
         stage('Build') {
-            steps {  
-                dir("/var/lib/jenkins/workspace/Maven_Docker_pipeline/projet_j2e/") {
+         
+                dir("/var/lib/jenkins/workspace/Maven_Docker_pipeline/projet_j2e/") 
                 sh 'mvn -B -DskipTests clean package'
-                }
+                
             
             }
-        }
-     }
+        
+     
     post {
        always {
           junit(
