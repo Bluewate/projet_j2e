@@ -2,7 +2,7 @@ FROM tomcat:latest
 
 LABEL maintainer="Nidhi Gupta"
 
-COPY /var/lib/jenkins/workspace/pipeline_maven_docker/webapp/target/webapp.war /usr/local/tomcat/webapps/webapp.war
+RUN cp /var/lib/jenkins/.m2/repository/com/example/maven-project/webapp/1.0-SNAPSHOT/webapp-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/webapp.war
 
 EXPOSE 8080
 
