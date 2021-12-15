@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build') {
             steps {  
-                dir("/var/lib/jenkins/workspace/Maven_Docker_pipeline/") {
+                dir("/var/lib/jenkins/workspace/Maven_Docker_pipeline/projet_j2e/") {
                 sh 'mvn -B -DskipTests clean package'
                 }
             
