@@ -2,7 +2,7 @@ FROM tomcat:latest
 
 LABEL maintainer="Nidhi Gupta"
 
-ADD  /webapp/target/webapp.war  /usr/local/tomcat/webapps/
+COPY  /webapp/target/webapp.war  /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
